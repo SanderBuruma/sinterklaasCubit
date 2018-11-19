@@ -1,23 +1,24 @@
 
 html, body {
-	background-color: #fff;
 	color: #636b6f;
 	font-family: 'Nunito', sans-serif;
 	font-weight: 200;
 	margin: 0;
 	min-height: 100%;
 	width: 100%;
-}
-
-body {
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: #fff0;
 }
 
 nav {
 	background-color: #a66;
 	color: white;
 	margin-bottom: 2rem;
+}
+.navbar-brand h3 {
+	font-weight: 800;
 }
 
 .full-height {
@@ -63,12 +64,12 @@ nav {
 }
 
 .card-header {
-	background-color: #fcc;
+	background-color: #faa;
 	font-size: 1.5rem;
 }
 
 .nav-link {
-	font-weight: bold;
+	font-weight: 800;
 	font-size: 1.5rem;
 }
 
@@ -92,4 +93,8 @@ nav img{
 .form-control:focus {
 	border-color: #faa;
 	box-shadow: 0 0 0 .2rem #faa;
+}
+.card-header {
+	text-align: center;
+	color: black;
 }

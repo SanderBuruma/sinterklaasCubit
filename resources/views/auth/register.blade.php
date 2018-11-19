@@ -2,7 +2,7 @@
 
 @section('header')
 <style>
-body {
+html {
 	background-image: url('img/pepernoten.jpeg');
 }
 </style>

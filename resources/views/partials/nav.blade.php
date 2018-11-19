@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
 	<div class="container">
-		<a class="navbar-brand" href="{{ url('/') }}"><img src="svg/mijter.svg" height="32">  Sinterklaas Verlanglijst</a>
+		<a class="navbar-brand" href="{{ url('/') }}"><h3><img src="svg/mijter.svg" height="32">  Sinterklaas Verlanglijst</h3></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -16,11 +16,11 @@
 				<!-- Authentication Links -->
 				@guest
 					<li class="nav-item">
-						<a class="nav-link" href="{{ route('login') }}">{{ __('Log In!') }}</a>
+						<h3><a class="nav-link" href="{{ route('login') }}">{{ __('Log In!') }}</a></h3>
 					</li>
 					<li class="nav-item">
 						@if (Route::has('register'))
-							<a class="nav-link" href="{{ route('register') }}">{{ __('Registreer!') }}</a>
+							<h3><a class="nav-link" href="{{ route('register') }}">{{ __('Registreer!') }}</a></h3>
 						@endif
 					</li>
 				@else
