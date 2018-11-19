@@ -29,7 +29,7 @@
 							{{ Auth::user()->fname.' '.Auth::user()->lname }} ({{ Auth::user()->permission_level }}) <span class="caret"></span>
 						</a>
 
-						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+						<div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
 
 							<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 								@csrf

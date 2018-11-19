@@ -80,7 +80,16 @@ nav img{
 	height: 1.5em;
 }
 
-html, body {
+.btn-primary {
+	background-color: #800;
+	border-color: #a22;
 }
-body {
+.btn-primary:hover,
+.btn-primary:focus {
+	background-color: #d66;
+	border-color: #f66;
+}
+.form-control:focus {
+	border-color: #faa;
+	box-shadow: 0 0 0 .2rem #faa;
 }
