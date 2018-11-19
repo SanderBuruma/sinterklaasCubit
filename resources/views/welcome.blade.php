@@ -5,11 +5,10 @@
 		<div class="title m-b-md">
 				Sinterklaas
 		</div>
-		<h5>Verlanglijst</h5>
 		@if(\Auth::check())
-			<h6>Vertel Sinterklaas wie jij bent zodat hij weet wie jij bent wanneer hij langs komt.</h6>
+			
 		@else
-
+			<h6><strong><a href="{{ route('register') }}">Vertel </a></strong>Sinterklaas wie je bent voordat je je verlanglijstje maakt.</h6>
 		@endif
 		<h3></h3>
 	</div>
