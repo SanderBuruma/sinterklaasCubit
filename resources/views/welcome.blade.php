@@ -1,16 +1,29 @@
 @extends('layouts.main')
+
+@section('header')
+<style>
+h2 {
+	max-width: 90%;
+	margin: auto;
+}
+a{
+	color: darkred;
+}
+a:hover,
+a:focus {
+	color: darkred;
+}
+</style>
+@endsection
+
 @section('content')
-<div class="flex-center position-ref full-height">
-	<div class="content">
-		<div class="title m-b-md">
-				Sinterklaas
-		</div>
+<div class="row">
+	<div class="mx-auto title m-b-md">
 		@if(\Auth::check())
 			
 		@else
-			<h6><strong><a href="{{ route('register') }}">Vertel </a></strong>Sinterklaas wie je bent voordat je je verlanglijstje maakt.</h6>
+			<h2><strong><a href="{{ route('register') }}">Vertel</a></strong> Sinterklaas wie je bent voordat je je verlanglijstje maakt.</h2>
 		@endif
-		<h3></h3>
 	</div>
 </div>
 @endsection

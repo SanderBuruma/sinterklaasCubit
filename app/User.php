@@ -9,7 +9,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use Notifiable;
-    public function orders(){
+    public function items(){
 		return $this->hasMany('App\Item');
 	}
 
@@ -19,7 +19,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'fname', 'lname', 'city', 'age', 'personality', 'sex', 'email', 'password', 
     ];
 
     /**

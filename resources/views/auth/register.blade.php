@@ -5,6 +5,24 @@
 html {
 	background-image: url('img/pepernoten.jpeg');
 }
+#sinterklaas {
+  position: absolute;
+  margin-top: -310px;
+	z-index: -1;
+	left: 10%;
+}
+.container.register {
+	margin-top: 20rem;
+}
+@media screen and (max-width: 280px) {
+	#sinterklaas {
+		height: 240px;
+		margin-top: -235px;
+	}
+	.container.register {
+		margin-top: 16rem;
+	}
+}
 </style>
 @endsection
 
@@ -13,6 +31,7 @@ html {
 	<div class="row justify-content-center">
 		<div class="col-md-8">
 			<div class="card">
+				<img id="sinterklaas" src="svg/sinterklaas.svg" height="320"/>
 				<div class="card-header">{{ __('Vertel Sinterklaas over jezelf!') }}</div>
 
 				<div class="card-body">
@@ -20,7 +39,7 @@ html {
 						@csrf
 
 						<div class="form-group row">
-							<label for="fname" class="col-md-4 col-form-label text-md-right">{{ __('Voornaam:') }}</label>
+							<label for="fname" class="col-md-4 col-form-label text-md-right">{{ __('Voornaam:*') }}</label>
 
 							<div class="col-md-6">
 								<input id="fname" type="text" class="form-control{{ $errors->has('fname') ? ' is-invalid' : '' }}" name="fname" value="{{ old('fname') }}" required autofocus>
@@ -34,10 +53,10 @@ html {
 						</div>
 
 						<div class="form-group row">
-							<label for="lname" class="col-md-4 col-form-label text-md-right">{{ __('Achternaam:') }}</label>
+							<label for="lname" class="col-md-4 col-form-label text-md-right">{{ __('Achternaam:*') }}</label>
 
 							<div class="col-md-6">
-									<input id="lname" type="text" class="form-control{{ $errors->has('lname') ? ' is-invalid' : '' }}" name="lname" value="{{ old('lname') }}" required autofocus>
+									<input id="lname" type="text" class="form-control{{ $errors->has('lname') ? ' is-invalid' : '' }}" name="lname" value="{{ old('lname') }}" autofocus>
 
 									@if ($errors->has('lname'))
 											<span class="invalid-feedback" role="alert">
@@ -48,10 +67,10 @@ html {
 						</div>
 
 						<div class="form-group row">
-							<label for="city" class="col-md-4 col-form-label text-md-right">{{ __('Stad:') }}</label>
+							<label for="city" class="col-md-4 col-form-label text-md-right">{{ __('Stad:*') }}</label>
 
 							<div class="col-md-6">
-									<input id="city" type="text" class="form-control{{ $errors->has('city') ? ' is-invalid' : '' }}" name="city" value="{{ old('city') }}" required autofocus>
+									<input id="city" type="text" class="form-control{{ $errors->has('city') ? ' is-invalid' : '' }}" name="city" value="{{ old('city') }}" autofocus>
 
 									@if ($errors->has('city'))
 											<span class="invalid-feedback" role="alert">
@@ -62,11 +81,10 @@ html {
 						</div>
 
 						<div class="form-group row">
-							<label for="age" class="col-md-4 col-form-label text-md-right">{{ __('Leeftijd:') }}</label>
+							<label for="age" class="col-md-4 col-form-label text-md-right">{{ __('Leeftijd:*') }}</label>
 
 							<div class="col-md-6">
-									<input id="age" min="0" type="number" class="form-control{{ $errors->has('age') ? ' is-invalid' : '' }}" name="age" value="{{ old('age') }}" required autofocus>
-
+									<input id="age" min="0" type="number" class="form-control{{ $errors->has('age') ? ' is-invalid' : '' }}" name="age" value="{{ old('age') }}" autofocus>
 									@if ($errors->has('age'))
 											<span class="invalid-feedback" role="alert">
 													<strong>{{ $errors->first('age') }}</strong>
@@ -76,25 +94,25 @@ html {
 						</div>
 
 						<div class="form-group row">
-							<label for="personaliteit" class="col-md-4 col-form-label text-md-right">{{ __('Personaliteit:') }}</label>
+							<label for="personality" class="col-md-4 col-form-label text-md-right">{{ __('Personaliteit:*') }}</label>
 
 							<div class="col-md-6">
-									<textarea id="personaliteit" type="text" class="form-control{{ $errors->has('personaliteit') ? ' is-invalid' : '' }}" name="personaliteit" value="{{ old('personaliteit') }}" required autofocus></textarea>
+									<textarea id="personality" type="text" class="form-control{{ $errors->has('personality') ? ' is-invalid' : '' }}" name="personality" value="{{ old('personality') }}" autofocus></textarea>
 
-									@if ($errors->has('personaliteit'))
+									@if ($errors->has('personality'))
 											<span class="invalid-feedback" role="alert">
-													<strong>{{ $errors->first('personaliteit') }}</strong>
+													<strong>{{ $errors->first('personality') }}</strong>
 											</span>
 									@endif
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="sex" class="col-md-4 col-form-label text-md-right">{{ __('Geslacht:') }}</label>
+							<label for="sex" class="col-md-4 col-form-label text-md-right">{{ __('Geslacht:*') }}</label>
 
 							<div class="col-md-6">
 									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="radio" name="sex" id="inlineRadio1" value="Jongen">
+										<input class="form-check-input" type="radio" name="sex" id="inlineRadio1" value="Jongen" checked>
 										<label class="form-check-label" for="inlineRadio1">Jongen</label>
 									</div>
 									<div class="form-check form-check-inline">
@@ -111,7 +129,7 @@ html {
 						</div>
 
 						<div class="form-group row">
-							<label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+							<label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address:*') }}</label>
 
 							<div class="col-md-6">
 									<input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
@@ -125,7 +143,7 @@ html {
 						</div>
 
 						<div class="form-group row">
-							<label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Paswoord') }}</label>
+							<label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Paswoord:*') }}</label>
 
 							<div class="col-md-6">
 								<input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
@@ -139,7 +157,7 @@ html {
 						</div>
 
 						<div class="form-group row">
-							<label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Zelfde Paswoord') }}</label>
+							<label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Zelfde Paswoord:*') }}</label>
 
 							<div class="col-md-6">
 								<input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
