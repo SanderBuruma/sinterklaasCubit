@@ -6,12 +6,26 @@ h2 {
 	max-width: 90%;
 	margin: auto;
 }
-a{
+a {
 	color: darkred;
 }
 a:hover,
 a:focus {
 	color: darkred;
+}
+table {
+  font-size: 2rem;
+}
+input {
+	border: unset;
+	width: 100%;
+
+}
+td {
+	border-top: none !important;
+}
+td:nth-child(2){
+  border-bottom: solid 1px red;
 }
 </style>
 @endsection
@@ -19,17 +33,21 @@ a:focus {
 @section('content')
 <div class="row">
 	@if(\Auth::check())
-	<div class="col-md-8 offset-md-2" style="background-color: red; color: white;">
+	<div class="col-md-8 offset-md-2">
 
-		<table>
+		<table class="table">
 			<tbody>
 				<?php $count = 0; ?>
 				@foreach( Auth::user()->items as $item )
-				<tr id="item{{ $item->id }}" class="content-justify-center">
-					<td>{{ ++$count }}</td>
+				<tr id="item{{ $item->id }}" data-user-id="{{ $item->user_id}}" class="content-justify-center">
+					<td>{{ ++$count }} - </td>
 					<td>{{ $item->wish }}</td>
 				</tr>
 				@endforeach
+				<tr id="new-wish-row" class="content-justify-center">
+					<td>{{ ++$count }} - </td>
+					<td><input type="text" id="new-wish"><input type="text" id="user-id" hidden value="{{ Auth::user()->id }}"></td>
+				</tr>
 			</tbody>
 		</table>
 
@@ -39,6 +57,7 @@ a:focus {
 	@endif
 	</div>
 </div>
+{{ csrf_field() }}
 @endsection
 
 @section('footer');

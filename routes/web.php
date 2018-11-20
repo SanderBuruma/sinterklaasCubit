@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('item', 'ItemController');
 Auth::routes();
 
 Route::get('/welcome', 'HomeController@index')->name('home');

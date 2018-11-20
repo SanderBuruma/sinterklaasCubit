@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Item;
 
 class ItemController extends Controller
 {
@@ -34,7 +35,19 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // return $request->all();
+        $this->validate($request, [
+			'user_id' 			=> 'exists:users,id',
+			'wish' 			    => 'required|string'
+		]);
+
+		$item = new Item();
+		
+		$item->wish = $request->wish;
+		$item->user_id = $request->user_id;
+        $item->save();
+        
+        return response()->json(['success' => "Wens naar Sinterklaas gestuurd: $request->wish"]);
     }
 
     /**
@@ -45,7 +58,7 @@ class ItemController extends Controller
      */
     public function show($id)
     {
-        //
+        return ("$id asdf");
     }
 
     /**
