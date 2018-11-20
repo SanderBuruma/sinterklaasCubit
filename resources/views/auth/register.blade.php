@@ -6,22 +6,11 @@ html {
 	background-image: url('img/pepernoten.jpeg');
 }
 #sinterklaas {
-  position: absolute;
-  margin-top: -310px;
 	z-index: -1;
-	left: 10%;
+	margin-bottom: -2rem;
 }
 .container.register {
-	margin-top: 20rem;
-}
-@media screen and (max-width: 280px) {
-	#sinterklaas {
-		height: 240px;
-		margin-top: -235px;
-	}
-	.container.register {
-		margin-top: 16rem;
-	}
+	margin-top: 2rem;
 }
 </style>
 @endsection
