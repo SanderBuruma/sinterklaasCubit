@@ -27,6 +27,9 @@ td {
 td:nth-child(2){
   border-bottom: solid 1px red;
 }
+.table tbody + tbody {
+	border-top: none;
+}
 </style>
 @endsection
 
@@ -36,19 +39,13 @@ td:nth-child(2){
 	<div class="col-md-8 offset-md-2">
 
 		<table class="table">
-			<tbody>
-				<?php $count = 0; ?>
-				@foreach( Auth::user()->items as $item )
-				<tr id="item{{ $item->id }}" data-user-id="{{ $item->user_id}}" class="content-justify-center">
-					<td>{{ ++$count }} - </td>
-					<td>{{ $item->wish }}</td>
-				</tr>
-				@endforeach
-				<tr id="new-wish-row" class="content-justify-center">
-					<td>{{ ++$count }} - </td>
-					<td><input type="text" id="new-wish"><input type="text" id="user-id" hidden value="{{ Auth::user()->id }}"></td>
-				</tr>
+			<tbody id="wish-table">
+				{{--here is inserted jquery.ajax  --}}
 			</tbody>
+			<tr id="new-wish-row" class="content-justify-center">
+				<td id="wish-input-count">{{ ++$count }} - </td>
+				<td><input type="text" id="new-wish"><input type="text" id="user-id" hidden value="{{ Auth::user()->id }}"></td>
+			</tr>
 		</table>
 
 	@else
