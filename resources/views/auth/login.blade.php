@@ -67,10 +67,6 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Log In!') }}
                                 </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('Je paswoord vergeten?') }}
-                                </a>
                             </div>
                         </div>
                     </form>
