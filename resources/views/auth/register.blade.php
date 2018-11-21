@@ -5,10 +5,6 @@
 html {
 	background-image: url('img/pepernoten.jpeg');
 }
-#sinterklaas {
-	z-index: -1;
-	margin-bottom: -2rem;
-}
 .container.register {
 	margin-top: 2rem;
 }
@@ -20,7 +16,7 @@ html {
 	<div class="row justify-content-center">
 		<div class="col-md-8">
 			<div class="card">
-				<img id="sinterklaas" src="svg/sinterklaas.svg" height="320"/>
+				<img id="sinterklaas" src="/svg/sinterklaas.svg" height="320"/>
 				<div class="card-header">{{ __('Vertel Sinterklaas over jezelf!') }}</div>
 
 				<div class="card-body">

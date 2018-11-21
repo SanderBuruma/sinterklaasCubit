@@ -18,6 +18,7 @@ body {
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+                <img id="sinterklaas" src="/svg/sinterklaas.svg" height="320"/>
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">

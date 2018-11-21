@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
 	<div class="container">
-		<a class="navbar-brand" href="{{ url('/') }}"><h3><img src="svg/mijter.svg" height="32">  Sinterklaas Verlanglijst</h3></a>
+		<a class="navbar-brand" href="{{ url('/') }}"><h3><img src="/svg/mijter.svg" height="32">  Sinterklaas Verlanglijst</h3></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
 			<span class="navbar-toggler-icon"></span>
 		</button>

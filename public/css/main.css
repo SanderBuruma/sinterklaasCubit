@@ -17,6 +17,10 @@ nav {
 	color: white;
 	margin-bottom: 1rem;
 }
+#sinterklaas {
+	z-index: -1;
+	margin-bottom: -2rem;
+}
 .navbar-brand h3 {
 	font-weight: 800;
 }
@@ -110,4 +114,36 @@ nav img{
 .btn-link:focus,
 .btn-link:hover {
 	color: red;
+}
+
+h2 {
+	max-width: 90%;
+	margin: auto;
+}
+a {
+	color: darkred;
+}
+a:hover,
+a:focus {
+	color: darkred;
+}
+table {
+  font-size: 2rem;
+}
+input {
+	border: unset;
+	width: 100%;
+
+}
+td {
+	border-top: none !important;
+}
+td:nth-child(2){
+  border-bottom: solid 1px red;
+}
+.table tbody + tbody {
+	border-top: none;
+}
+.wish-delete {
+	cursor: pointer;
 }

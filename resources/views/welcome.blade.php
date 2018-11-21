@@ -2,37 +2,6 @@
 
 @section('header')
 <style>
-h2 {
-	max-width: 90%;
-	margin: auto;
-}
-a {
-	color: darkred;
-}
-a:hover,
-a:focus {
-	color: darkred;
-}
-table {
-  font-size: 2rem;
-}
-input {
-	border: unset;
-	width: 100%;
-
-}
-td {
-	border-top: none !important;
-}
-td:nth-child(2){
-  border-bottom: solid 1px red;
-}
-.table tbody + tbody {
-	border-top: none;
-}
-.wish-delete {
-	cursor: pointer;
-}
 </style>
 @endsection
 
@@ -40,16 +9,25 @@ td:nth-child(2){
 <div class="row">
 	@if(\Auth::check())
 	<div class="col-md-8 offset-md-2">
+		<div class="card">
+			<img id="sinterklaas" src="/svg/sinterklaas.svg" height="320"/>
+			<div class="card-header">{{ "Verlanglijst van ".Auth::user()->fname." ".Auth::user()->lname }}</div>
+			<table class="table">
+				<tbody id="wish-table">
+					{{-- jquery.ajax here inserts wishes --}}
+				</tbody>
+				<tr id="new-wish-row" class="content-justify-center">
+					<td id="wish-input-count"></td>
+					<td><input type="text" id="new-wish"><input type="text" id="user-id" hidden value="{{ Auth::user()->id }}"></td>
+				</tr>
+			</table>
+		</div>
 
-		<table class="table">
-			<tbody id="wish-table">
-				{{-- jquery.ajax here inserts wishes --}}
-			</tbody>
-			<tr id="new-wish-row" class="content-justify-center">
-				<td id="wish-input-count"></td>
-				<td><input type="text" id="new-wish"><input type="text" id="user-id" hidden value="{{ Auth::user()->id }}"></td>
-			</tr>
-		</table>
+		<div class="card">
+			<div class="card-header">
+				<a href="{{ $slug = route('verlanglijst.single', Auth::user()->slug) }}">{{ $slug }}</a>
+			</div>
+		</div>
 
 	@else
 	<div class="mx-auto title m-b-md">
