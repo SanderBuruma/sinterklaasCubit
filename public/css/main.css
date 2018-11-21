@@ -131,6 +131,8 @@ tr:nth-child(2n) {
 .card-header {
 	background-color: #faa;
 	font-size: 1.5rem;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
 }
 
 .card {
