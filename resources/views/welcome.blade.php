@@ -29,7 +29,7 @@ h2 {
 
 		<div class="card">
 			<div class="card-header">
-				<a href="{{ $slug = route('verlanglijst.single', Auth::user()->slug) }}">{{ $slug }}</a>
+				<a class="slug-link" href="{{ $slug = route('verlanglijst.single', Auth::user()->slug) }}">{{ $slug }}</a>
 			</div>
 		</div>
 

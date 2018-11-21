@@ -178,3 +178,9 @@ tr:nth-child(2n) {
 .row {
 	margin: 0;
 }
+.slug-link {
+	color: black;
+}
+.slug-link:hover {
+	color: black;
+}
