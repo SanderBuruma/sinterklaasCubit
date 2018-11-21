@@ -45,9 +45,9 @@ class ItemController extends Controller
 	
 	$item->wish = $request->wish;
 	$item->user_id = $request->user_id;
-		$item->save();
+	$item->save();
 		
-		return response()->json(['success' => "Wens naar Sinterklaas gestuurd: $request->wish"]);
+	return response()->json(['success' => "Wens naar Sinterklaas gestuurd: $request->wish"]);
 	}
 
 	/**
