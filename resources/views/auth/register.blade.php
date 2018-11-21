@@ -1,10 +1,9 @@
 @extends('layouts.main')
 
+@section('title', "| Registreer!")
+
 @section('header')
 <style>
-html {
-	background-image: url('img/pepernoten.jpeg');
-}
 .container.register {
 	margin-top: 2rem;
 }

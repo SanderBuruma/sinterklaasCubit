@@ -1,22 +1,83 @@
 
 html, body {
 	color: #636b6f;
-	font-family: 'Nunito', sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 200;
 	margin: 0;
 	min-height: 100%;
 	width: 100%;
+	background-color: #fff0;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-color: #fff0;
 }
-
+html {
+	background-image: url('/img/pakjesavond.jpeg');
+}
 nav {
-	background-color: #a66;
+	background-color: #a660;
 	color: white;
 	margin-bottom: 1rem;
 }
+
+nav img{
+	height: 1.5em;
+}
+
+nav a {
+	color: white !important;
+}
+nav a:hover {
+	text-decoration: underline !important;
+}
+.navbar-toggler {
+	background-color: #fff8;
+}
+
+.nav-link {
+	font-weight: 800;
+	font-size: 1.5rem;
+}
+
+.dropdown-menu {
+	background-color: #fff0 !important;
+}
+.dropdown-menu:hover {
+	background-color: unset !important;
+}
+
+h2 {
+	max-width: 90%;
+	margin: auto;
+}
+a {
+	color: #fdd;
+}
+a:hover,
+a:focus {
+	color: #fdd;
+}
+table {
+  font-size: 2rem;
+}
+input {
+	border: unset;
+	width: 100%;
+
+}
+td {
+	border-top: none !important;
+}
+td:nth-child(2){
+  border-bottom: solid 1px red;
+}
+tr {
+	background-color: white;
+}
+tr:nth-child(2n) {
+	background-color: #eee;
+}
+
 #sinterklaas {
 	z-index: -1;
 	margin-bottom: -2rem;
@@ -72,17 +133,8 @@ nav {
 	font-size: 1.5rem;
 }
 
-.nav-link {
-	font-weight: 800;
-	font-size: 1.5rem;
-}
-
 .card {
 	border: none;
-}
-
-nav img{
-	height: 1.5em;
 }
 
 .btn-primary {
@@ -116,34 +168,13 @@ nav img{
 	color: red;
 }
 
-h2 {
-	max-width: 90%;
-	margin: auto;
-}
-a {
-	color: darkred;
-}
-a:hover,
-a:focus {
-	color: darkred;
-}
-table {
-  font-size: 2rem;
-}
-input {
-	border: unset;
-	width: 100%;
 
-}
-td {
-	border-top: none !important;
-}
-td:nth-child(2){
-  border-bottom: solid 1px red;
-}
 .table tbody + tbody {
 	border-top: none;
 }
 .wish-delete {
 	cursor: pointer;
+}
+.row {
+	margin: 0;
 }

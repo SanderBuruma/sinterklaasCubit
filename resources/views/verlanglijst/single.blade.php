@@ -1,9 +1,6 @@
 @extends('layouts.main')
 
-@section('header')
-<style>
-</style>
-@endsection
+@section('title', "| Verlanglijst $user->fname $user->lname")
 
 @section('content')
 <div class="row">
@@ -26,7 +23,4 @@
 	</div>
 </div>
 {{ csrf_field() }}
-@endsection
-
-@section('footer');
 @endsection

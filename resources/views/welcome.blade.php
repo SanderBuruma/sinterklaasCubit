@@ -2,6 +2,9 @@
 
 @section('header')
 <style>
+h2 {
+	color: white;
+}
 </style>
 @endsection
 
@@ -19,6 +22,7 @@
 				<tr id="new-wish-row" class="content-justify-center">
 					<td id="wish-input-count"></td>
 					<td><input type="text" id="new-wish"><input type="text" id="user-id" hidden value="{{ Auth::user()->id }}"></td>
+					<td></td>
 				</tr>
 			</table>
 		</div>
