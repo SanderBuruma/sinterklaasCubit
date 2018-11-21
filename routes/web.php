@@ -18,4 +18,6 @@ Route::get('/', function () {
 Route::resource('item', 'ItemController');
 Auth::routes();
 
+Route::get('verlanglijst/{slug}', ['as' => 'verlanglijst.single', 'uses'=>'Verlanglijstcontroller@slug'])->where('slug', '[\w\d\-\_]+');
+
 Route::get('/welcome', 'HomeController@index')->name('home');

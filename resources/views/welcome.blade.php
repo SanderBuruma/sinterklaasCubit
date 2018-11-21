@@ -30,6 +30,9 @@ td:nth-child(2){
 .table tbody + tbody {
 	border-top: none;
 }
+.wish-delete {
+	cursor: pointer;
+}
 </style>
 @endsection
 
@@ -40,10 +43,10 @@ td:nth-child(2){
 
 		<table class="table">
 			<tbody id="wish-table">
-				{{--here is inserted jquery.ajax  --}}
+				{{-- jquery.ajax here inserts wishes --}}
 			</tbody>
 			<tr id="new-wish-row" class="content-justify-center">
-				<td id="wish-input-count">{{ ++$count }} - </td>
+				<td id="wish-input-count"></td>
 				<td><input type="text" id="new-wish"><input type="text" id="user-id" hidden value="{{ Auth::user()->id }}"></td>
 			</tr>
 		</table>
